@@ -1,21 +1,20 @@
-<h1>Cats!</h1>
+<h1>Burgers</h1>
 
-<h2>Cats that are not sleepy!</h2>
 
 <ul>
   {{#each burgers}}
-    {{#unless devour}}
-      {{> burgers/burger-block devour=true}}
+    {{#unless devoured}}
+      {{!-- {{> burgers/burger-block devour=true}} --}}
     {{/unless}}
   {{/each}}
 </ul>
 
-<h2>devour</h2>
+<h2>Devoured</h2>
 
 <ul>
   {{#each burgers}}
-    {{#if devour}}
-      {{> burgers/burger-block devour=false}}
+    {{#if devoured}}
+      {{!-- {{> burgers/burger-block devoured=false}} --}}
     {{/if}}
   {{/each}}
 </ul>
@@ -25,14 +24,14 @@
 
   <div class="form-group">
     <label for="ca">burger Name:</label>
-    <input type="text" id="ca" name="name">
+    <input type="text" id="ca" name="burger_name">
   </div>
 
-  <div class="form-group">
-    <label for="devour">Devour</label><br>
-    <input type="radio" name="devour" value="1" checked> Devour<br>
-    <input type="radio" name="devour" value="0"> burger
-  </div>
+  {{!-- <div class="form-group">
+    <label for="devoured">Devoured</label><br>
+    <input type="radio" name="devoured" value="1" checked> Devoured<br>
+    <input type="radio" name="devoured" value="0"> burger
+  </div> --}}
 
   <button type="submit">Add burger</button>
 </form>

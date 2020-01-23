@@ -84,5 +84,5 @@ delete: function(table, condition, cb) {
     });
 }
 };
-
+// Export orm for model burger.js
 module.exports = orm;

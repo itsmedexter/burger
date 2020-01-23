@@ -3,7 +3,7 @@ var orm = require("../config/orm.js");
 var burger = {
     all: function(cb) {
     orm.all("burgers", function(res){
-        cr(res);
+        cb(res);
     });
 },
 
@@ -23,5 +23,5 @@ delete: function(condition, cb) {
     });
 }    
 };
-
+// exports db functions for burgers_controller
 module.exports = burger;
